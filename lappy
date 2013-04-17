@@ -1,8 +1,15 @@
 #!/usr/bin/env ruby
 
+# Bundler setup
 require 'rubygems'
 require 'bundler/setup'
 
+# Gem dependencies
 require 'curb'
 
-puts 'Hello, I\'m Lappy.'
+# Lappy files
+require'./lib/Main'
+
+# Process those arguments
+lappy = Lappy::Main.new
+lappy.process ARGV
