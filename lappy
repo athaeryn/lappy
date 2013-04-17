@@ -7,8 +7,17 @@ require 'bundler/setup'
 # Gem dependencies
 require 'curb'
 
+# Lib dependencies
+require 'pathname'
+require 'json'
+require 'yaml'
+
+# Add this directory to the LOAD_PATH
+PATH = File.dirname(Pathname.new(__FILE__).realpath)
+$:.unshift(PATH)
+
 # Lappy files
-require'./lib/Main'
+require 'lib/Main'
 
 # Process those arguments
 lappy = Lappy::Main.new
