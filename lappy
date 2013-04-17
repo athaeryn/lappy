@@ -18,6 +18,7 @@ $:.unshift(PATH)
 
 # Lappy files
 require 'lib/Main'
+require 'lib/Curler'
 
 # Process those arguments
 lappy = Lappy::Main.new
