@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+
+require 'curb'
+require 'json'
+require 'yaml'
+
+# Grab the Computer article if there's nothing given
+page = ARGV[0] || "Computer"
+
+c = Curl::Easy.perform("http://en.wikipedia.org/w/api.php?action=parse&format=json&page=#{page}")
+json = JSON.parse c.body_str
+
+if json["error"]
+    puts "ERROR: #{json["error"]["info"]}"
+    exit
+end
+
+# this is ugly but it works...
+text = json["parse"]["text"]["*"]
+text.gsub!(/<\/?[^>]*>/, "")
+
+words = text.split(/\s/)
+
+puts words.length
+words.delete_if { |w|
+    w.empty? || w =~ /,|\.\*/
+}
+puts words.length
+
+sentence = []
+
+(6..12).to_a.sample.times do
+    sentence << words.sample
+end
+
+print sentence
+puts
+
+sentence = sentence.join(" ") + ".\n"
+sentence = sentence.slice(0,1).capitalize + sentence.slice(1..-1)
+
+puts sentence
+puts sentence.size
