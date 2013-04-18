@@ -1,11 +1,8 @@
 module Lappy
     class Curler
-        def initialize
-            @url = "http://en.wikipedia.org/w/api.php?action=parse&format=json&page="
-        end
-
-        def get subject="Computer"
-            json = JSON.parse(Curl.get(@url + subject).body_str)
+        def self.get subject="Computer"
+            url = "http://en.wikipedia.org/w/api.php?action=parse&format=json&page="
+            json = JSON.parse(Curl.get(url + subject).body_str)
             if json["error"]
                 puts "ERROR: #{json["error"]["info"]}"
                 return false
