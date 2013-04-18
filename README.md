@@ -1,3 +1,17 @@
 #LAPPY
 
 MOTHEREFFING LAPPY
+
+## AUTHORIZING TWITTER
+
+You must have a file called `auth.yml` in the base directory of the project.
+
+It should look like this:
+
+    ---
+    :consumer_key: ABCDEFGHIJKLMNOPQRSTUV
+    :consumer_secret: ABCDEFGHIJKLMNOPQRSTUVWXYZYXWVUTSRQPONML
+    :oauth_token: 123456789-ABCDEFGHIJKLMNOPQRSTUVWXYZ12345678909876
+    :oauth_token_secret: ABCDEFGHIJKLMNOPENISUVWXYZYXWVUTSRQPONMLKJI
+
+NOTE: THERE ARE NOT REAL KEYS YOU HAVE TO FIND YOUR OWN

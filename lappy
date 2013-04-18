@@ -6,6 +6,7 @@ require 'bundler/setup'
 
 # Gem dependencies
 require 'curb'
+require 'twitter'
 
 # Lib dependencies
 require 'pathname'
@@ -19,8 +20,8 @@ $:.unshift(PATH)
 # Lappy files
 require 'lib/Main'
 require 'lib/Curler'
+require 'lib/Tweeter'
 require 'lib/Wordler'
 
 # Process those arguments
-lappy = Lappy::Main.new
-lappy.process ARGV
+Lappy::Main.new.process ARGV

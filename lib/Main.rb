@@ -17,7 +17,14 @@ module Lappy
                         puts args
                     end
                 when "speak"
-                    Wordler.new.speak
+                    puts Wordler.new.speak
+                when "tweet"
+                    tweet = Wordler.new.speak
+                    if args[0] == "--force"
+                        Tweeter.tweet tweet
+                    else
+                        Tweeter.confirm_tweet tweet
+                    end
                 else
                     puts "Sorry, I don't understand what \"#{command}\" means."
             end

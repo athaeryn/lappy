@@ -41,7 +41,6 @@ module Lappy
 
         def speak
             page = links(links(links.sample).sample).sample
-            puts page
             words = process_html(Curler.get(page))
             sentence = []
 
@@ -52,7 +51,7 @@ module Lappy
             sentence = sentence.join(" ")
             sentence = sentence.slice(0,1).capitalize + sentence.slice(1..-1)
 
-            puts chop(sentence, 139) + '.'
+            chop(sentence, 139) + '.'
         end
     end
 end
