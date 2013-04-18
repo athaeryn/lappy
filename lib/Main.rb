@@ -16,6 +16,8 @@ module Lappy
                     unless args.empty?
                         puts args
                     end
+                when "speak"
+                    Wordler.new.speak
                 else
                     puts "Sorry, I don't understand what \"#{command}\" means."
             end
