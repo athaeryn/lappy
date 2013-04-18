@@ -1,7 +1,6 @@
 module Lappy
     class Main
         def initialize
-            puts 'Hello, I\'m Lappy.'
         end
 
         def process args
