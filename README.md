@@ -1,6 +1,15 @@
 #LAPPY
 
-MOTHEREFFING LAPPY
+MOTHEREFFING [LAPPY](https://twitter.com/lelappy)
+
+My MacBook tweets. This is the second attempt at this actually. If you look at
+his old tweets they're quite... repetitive. At first it was just a mad libs
+sort of deal, then I was using a *very* simple context free grammar to generate
+"sentences."
+
+The new approach is (currently) to get the links from the Computer article on
+Wikipedia and article hop a few times until finally grabbing random words off
+the page and throwing them together in to a sentence.
 
 ## AUTHORIZING TWITTER
 
